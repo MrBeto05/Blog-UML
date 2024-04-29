@@ -1,0 +1,117 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+p{
+    line-height: 2;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: #283747;
+    color: white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #633974 3px solid;
+}
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header ul {
+    padding: 0;
+    list-style: none;
+}
+header ul li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+header #branding {
+    float: left;
+}
+header #branding h1 {
+    margin: 0;
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+header .highlight, header .current a {
+    color: #2874A6;
+    font-weight: bold;
+}
+header a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+section#showcase {
+    min-height: 400px;
+    background: url('https://media.licdn.com/dms/image/D4E12AQEOrKBhh1B5kw/article-cover_image-shrink_720_1280/0/1687633673860?e=2147483647&v=beta&t=xmkVkabfWFeZBP6KQ2LnVdf0I8ZKIXWTsx3qbtemPtI') no-repeat center top;
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+}
+section#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+section#showcase p {
+    font-size: 20px;
+}
+section#main {
+    padding: 15px;
+    background: white;
+    color: #333;
+}
+footer {
+    background: #283747;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.section {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.section1{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.text-content, .image-content {
+    flex: 1;
+    padding: 15px;
+}
+.text-content1{
+    text-align: left;
+    flex: 1;
+    padding: 15px;
+}
+.text-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.text-content p {
+    font-size: 16px;
+}
+.image-content img {
+    max-width: 100%;
+    height: auto;
+}

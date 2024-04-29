@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Diagramas UML</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Diagramas</span> UML</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#showcase">Inicio</a></li>
+                    <li><a href="#teoria">Teoría</a></li>
+                    <li><a href="#asociaciones">Asociaciones</a></li>
+                    <li><a href="#ejemplos">Proyectos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="showcase">
+        <div class="container">
+            <h1><b>Diagramas UML</b></h1>
+            <br>
+            <p><b> La teoría, los tipos de asociaciones y ejemplos prácticos de UML.</b></p>
+        </div>
+    </section>
+    <section id="main">
+        <div class="container">
+            <br><br>
+            <article id="teoria" class="main-col">
+                <b>
+                    <center><h2>Teoría de Diagramas UML</h2></center>
+                    <p>
+                        La Teoría de Diagramas UML, o Modelado de Lenguaje Unificado (UML por sus siglas en inglés), es un lenguaje estándar para visualizar, especificar, construir y documentar los artefactos de los sistemas de software. Es una herramienta invaluable en el arsenal de cualquier desarrollador de software, ya que proporciona una forma común y clara de comunicar ideas y diseños entre miembros del equipo y partes interesadas. En este artículo, exploraremos los fundamentos de la Teoría de Diagramas UML, su importancia, y los tipos de diagramas más comunes utilizados en el desarrollo de software.
+                    </p>
+                    <br><br>
+                    <center><h2>¿Qué es UML?</h2></center>
+                    <p>
+                        UML es un lenguaje visual utilizado para modelar sistemas de software. Fue desarrollado en la década de 1990 por Grady Booch, James Rumbaugh e Ivar Jacobson, quienes fusionaron sus respectivos métodos de modelado (Booch, OMT y OOSE) para crear un estándar unificado. Desde entonces, UML ha evolucionado y se ha convertido en el estándar de facto en la industria del desarrollo de software.
+                    </p>
+                    <br><br>
+                </b>
+            </article>
+            <aside id="asociaciones" class="sidebar">
+                <center><h2>Tipos de Asociaciones en UML</h2></center>
+                <div class="section">
+                    <div class="text-content">
+                        <h3>Asociación</h3>
+                        <p>
+                            <b>Teoría</b>: Indica que una propiedad de una clase contiene una referencia a una instancia (o instancias) de otra clase.
+                            La asociación es la relación más utilizada entre una clase y otra clase, lo que significa que existe una conexión entre un tipo de objeto y otro tipo de objeto.
+                            Es decir, por lo general la asociación simple se establece entre clases de un mismo nivel o jerarquía que tienen algo en común o una conexión bilateral, es decir, que influya en ambas clases.
+                        </p>
+                        <p>
+                            <b>Ejemplo:</b> En el siguiente ejemplo de asociación se establecieron dos clases (concesionario y distribuidor o fábrica) en el que se establece una paridad de uno a muchos en ambos casos, dado que un concesionario puede tener muchos distribuidores así como la fábrica puede surtir muchos concesionarios. En este caso ninguna de las dos clases es subclase de la otra y pueden existir separadas, pero encuentran una relación de venta y compra que establece la relación de asociación.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="./Imagenes/Asociación.jpeg">
+                    </div>
+                </div>
+                <br><br>
+                <div class="section">
+                    <div class="image-content">
+                        <img src="./Imagenes/Asociación.jpeg">
+                    </div>
+                    <div class="text-content">
+                        <h3>Asociación Dirigida</h3>
+                        <p>
+                            <b>Teoría</b>: Se refiere a una relación direccional representada por una línea con una punta de flecha. 
+                            La punta de la flecha representa un flujo direccional contenido en el contenedor. 
+                            Es decir, indican que un elemento utiliza a otro, ya sea invocando sus métodos o accediendo a sus propiedades. 
+                            Sin embargo,  la existencia de una no necesariamente depende de la otra.
+                        </p>
+                        <p>
+                            <b>Ejemplo:</b> Como ejemplo de asociación dirigida se presenta la relación entre un autor y un libro. 
+                            El autor puede escribir muchos libros y el libro puede tener de uno a muchos autores (por lo general no excede de tres). 
+                            Si la clase autor no existiese, el libro podría seguir siendo un libro sin afectar su existencia, aunque ya no podrían producirse más de estos. 
+                            En tanto a los atributos, el único variable del libro sería el de su precio, ya que este depende de la editorial, de la fecha de publicación, de la calidad de la impresión, etc. 
+                            Y, en el caso del autor, solo se podría modificar los relativos a su vida profesional (libros publicados, editoriales en las que trabaja, premios ganados, etc).
+                        </p>
+                        <p>
+                            <b>Fuente:</b>https://davidlinan.wordpress.com/2009/12/07/asociaciones-uml/
+                        </p>
+                    </div>
+                </div>
+                <br><br>
+                <div class="section">
+                    <div class="text-content">
+                        <h3>Agregación</h3>
+                        <p>
+                            <b>Teoría</b>: Se refiere a la formación de una clase particular como resultado de una clase agregada o construida como una colección. 
+                            Por ejemplo, la clase “biblioteca” está formada por uno o varios libros, entre otros materiales. En la agregación, las clases contenidas no dependen fuertemente del ciclo de vida del contenedor. En el mismo ejemplo, los libros seguirán siéndolo aunque se disuelva la biblioteca. Para mostrar la agregación en un diagrama, se dibuja una línea desde la clase padre hasta la clase hija con una forma de diamante cerca de la clase padre.
+                        </p>
+                        <p>
+                            <b>Ejemplo:</b> Para demostrar la agregación con un ejemplo, se elaboró el siguiente diagrama en el que se observa una clase llamada ClubFutbol y otra llamada JugadorFutbol. En este ejemplo, el club puede tener de uno a muchos jugadores, mientras que el jugador solo puede pertenecer en el momento a un solo club (quitando las selecciones nacionales). Sin embargo, si el club se disuelve, el jugador podrá jugar en otro equipo, y si el jugador se marcha, el jugador seguirá existiendo. Por lo tanto, el ciclo de vida de la  subclase JugadorFutbol no depende del propio perteneciente a la clase madre (ClubFutbol). En tanto a los atributos del club, se encuentra el nombre de este, la liga en la que participa, su valor total, su cantidad de jugadores, su presidente, su director técnico (DT), su presupuesto, sus estadísticas entre otros. Por otra parte, el jugador tiene atributos como nombre, nacionalidad, edad, valor en el mercado futbolero, posición, dorsal, estadísticas y la duración de su contrato con el club. Respecto a los métodos u operaciones, cada clase tiene los propios para acceder a sus atributos y dependiendo también tiene los propios para modificarlos. Por ejemplo, el atributo ValorMercado tiene su getter y setter porque según sea el desempeño del jugador, su valor incrementará o disminuirá.
+                        </p>
+                        <p>
+                            <b>Fuente</b>:https://creately.com/blog/es/diagramas/relaciones-de-diagrama-de-clases-uml-explicadas-con-ejemplos/#Association
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="./Imagenes/Asociación.jpeg">
+                    </div>
+                </div>
+                <br><br>
+                <div class="section">
+                    <div class="image-content">
+                        <img src="./Imagenes/Composición.jpg">
+                    </div>
+                    <div class="text-content">
+                        <h3>Composición</h3>
+                        <p>
+                            <b>Teoría</b>: La relación de composición es muy similar a la relación de agregación. 
+                            Con la única diferencia de su propósito clave de enfatizar la dependencia de la clase contenida al ciclo de vida de la clase contenedora. 
+                            Es decir, la clase contenida será borrada cuando la clase contenedora sea destruida.
+                        </p>
+                        <p>
+                            <b>Ejemplo:</b> Para este ejemplo utilizamos dos clases(restaurante y Mesas) La relación entre Restaurante y Mesas se muestra como una composición, lo que significa que el restaurante "posee" las mesas, ya que si el restaurante se elimina, también lo hacen sus elementos que en este caso serian las mesas.
+                        </p>
+                        <p>
+                            <b>Fuente:</b>https://creately.com/blog/es/diagramas/relaciones-de-diagrama-de-clases-uml-explicadas-con-ejemplos/#Association
+                        </p>
+                    </div>
+                </div>
+                <br><br>
+                <div class="section">
+                    <div class="text-content">
+                        <h3>Generalización</h3>
+                        <p>
+                            <b>Teoría</b>: Se refiere a un tipo de relación en la que una clase asociada es hija de otra en virtud de asumir las mismas funcionalidades de la clase padre. En otras palabras, la clase hija es un tipo específico de la clase padre. Para mostrar la herencia en un diagrama UML, se dibuja una línea sólida desde la clase hija hasta la clase padre utilizando una punta de flecha sin rellenar.
+                        </p>
+                        <p>
+                            <b>Ejemplo:</b> Para el ejemplo de generalización utilizamos tres clases (Vehiculo, Carros y Motos) la clase carros  y motos están generalizados en la clase vehículos, ya que estos dos son demoninados como vehículos para movilizar
+                        </p>
+                        <p>
+                            <b>Fuente</b>:https://creately.com/blog/es/diagramas/relaciones-de-diagrama-de-clases-uml-explicadas-con-ejemplos/#Association
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="./Imagenes/Generalización.jpg">
+                    </div>
+                </div>
+                <br><br>
+                <div class="section">
+                    <div class="image-content">
+                        <img src="./Imagenes/Composición.jpg">
+                    </div>
+                    <div class="text-content">
+                        <h3>Dependencia</h3>
+                        <p>
+                            <b>Teoría</b>: La dependencia es una relación dirigida que se utiliza para mostrar que algún elemento UML o un conjunto de elementos requiere, necesita o depende de otros elementos del modelo para su especificación o implementación . Debido a esto, la dependencia se denomina relación proveedor - cliente , donde el proveedor proporciona algo al cliente y, por lo tanto, el cliente es en cierto sentido incompleto mientras depende semántica o estructuralmente de los elementos del proveedor. La modificación del proveedor puede afectar los elementos del cliente.
+                        </p>
+                        <p>
+                            <b>Ejemplo:</b> Utilizamos dos clases (Pedido y Cliente) se utilizo la dependencia ya que el pedido solo se puede hacer si el cliente realiza un pedido, sino se realiza ningún pedido entonces la clase pedido no funciona.
+                        </p>
+                        <p>
+                            <b>Fuente:</b>https://www.uml-diagrams.org/dependency.html
+                        </p>
+                    </div>
+                </div>
+            </aside>
+            <br><br>
+            <article id="ejemplos" class="main-col">
+                <center><h2>Proyectos en UML</h2></center>
+                <div class="section">
+                    <div class="text-content">
+                        <h3>Sistema de gestión de ingreso y asignación de turnos para el Hospital Habacuc Carmen de Carupa (Daniel Esteban Contreras Motoa)</h3>
+                        <p>
+                            En el siguiente proyecto se elabora un sistema de gestión de ingresos y de asignación de turnos para un hospital ubicado en el municipio de Carmen de Carupa. La clase principal es el hospital, el cual se asocia con una clase monitor; el hospital puede tener muchos monitores pero un monitor solo puede pertenecer a un hospital. Dicho monitor que tiene como atributos todo lo correspondiente al sistema de gestión de ingreso, tiene como subclase el sistema de asignación de turnos, es decir, es una relación de composición. Por otra parte, este sistema le asigna el turno correspondiente a una clase usuario, la cual se asocia con el hospital. El sistema puede entregar turnos a muchos usuarios mientras que los usuarios solo pueden recibir el turno de un solo sistema, aunque en diferentes monitores. Por último, el hospital puede tener de uno a muchos usuarios mientras que estos solo pueden ser atendido en un hospital a la vez.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="./Imagenes/Proyecto Motoa.jpeg">
+                    </div>
+                </div>
+                <br><br>
+                <div class="section">
+                    <div class="image-content">
+                        <img src="./Imagenes/SVI.jpg">
+                    </div>
+                    <div class="text-content">
+                        <h3>SISTEMA DE VIGILANCIA Y MONITOREO INTEGRAL (Humberto Pinilla y William Suarez)</h3>
+                        <p>
+                            En el siguiente proyecto se elabora un Sistema de vigilancia y monitoreo integral para los habitantes del valle de uvate, la principal clase es SistemaVigilanciaMonitoreo,  esta directamente asociada con la clase cámara que trae los atributos correspondientes a las camaras, ya que hay demasiadas camaras pero este sistema solo tiene un tipo de cámara, esta clase esta asociada con la clase de sensor de movimiento y sistema de alarma ya que es lo que trae el sistema de seguridad, estos van directamente asociados con la interfaz del usuario que tiene todos los atributos que tiene la interfaz del sistema para el usuario, la clase principal va asociada con el usuario ya que es el que directamente compra el sistema.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <div class="section1">
+            <div class="image-content">
+                <img src="./Imagenes/UCundinamarca.png" width="200px" height="200px">
+            </div>
+            <div class="text-content1">
+                <p>Humberto Pinilla Robayo hprobayo@ucundinamarca.edu.co</p>
+                <p>William David Suarez Briceño wdsuarez@ucundinamarca.edu.co</p>
+                <p>Daniel Esteban Contreras Motoa destebancontreras@ucundinamarca.edu.co</p>
+            </div>
+            <div class="image-content">
+                <img src="./Imagenes/Escudo.png" width="100px" height="100px">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
